@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  audio(controls autoplay)#player
+  #show
+      ul
+        - each season in show.seasons
+          h3=  season.name
+          li
+            ul
+              - each episode in season.episodes
+                h4= episode.name
+                li.song_list
+                  - each song in episode.songs
+                    a(href="#")= song.name
+                    div= "By " + song.singer
+                    br

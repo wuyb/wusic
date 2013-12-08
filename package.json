@@ -1,0 +1,15 @@
+{
+  "name": "4tune.cn",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "stylus": "*",
+    "jsdom": "0.8.8",
+    "mongodb": "*"
+  }
+}

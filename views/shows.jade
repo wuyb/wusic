@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  div.placeholder
+  div.row
+    div.large-10.columns
+      hr
+    div.large-2.columns
+      h4 编辑推荐
+  #editors-pick
+    div.row
+      div.large-4.columns
+        a(href="/shows/528af2d10cf9ae0023000025")
+          img(src="/images/featured/breaking_bad.jpg")
+      div.large-4.columns
+        a(href="/shows/528af2d10cf9ae002300007c")
+          img(src="/images/featured/the_good_wife.jpg")
+      div.large-4.columns
+        a(href="/shows/528af2d10cf9ae0023000092")
+          img(src="/images/featured/house.jpg")
+  div.row
+    hr
+  #shows
+  div.row
+    div.large-3.columns
+      h1 热门美剧
+    div.large-9.columns           
+        - each show in shows
+          div.show
+            a(href="/shows/" + show._id)= show.name
+  div.row
+    hr
+  div.row
+    div.large-3.columns
+      h1 热门歌曲
+    div.large-9.columns
+        - each song in songs
+          div.song
+            a(href="/shows/")= song.name
+            span 
+            span by 
+              span= song.singer
+  div.row
+    hr
